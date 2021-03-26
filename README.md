@@ -9,6 +9,8 @@
 
 ## Unit 1: Get started
 
+### Lesson 1: Build your first app
+
 By convention, log tags are defined as constants for the Activity:
 
 ```java
