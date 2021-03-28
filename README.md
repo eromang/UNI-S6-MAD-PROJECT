@@ -18,6 +18,8 @@ private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
 Log.d(LOG_TAG, "Hello World"); 
 ```
+### Lesson 2: Activities and intents
+
 
 
 
