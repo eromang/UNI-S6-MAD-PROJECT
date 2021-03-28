@@ -66,6 +66,7 @@ Log.d(LOG_TAG, "Hello World");
     - SecondActivity : onStop
     - SecondActivity : onDestroy
 
+
 To keep from losing data in an Activity when it is unexpectedly destroyed and recreated, you need to implement the **onSaveInstanceState()** method. The system calls this method on your Activity (between **onPause()** and **onStop()**) when there is a possibility the Activity may be destroyed and recreated.
 
 

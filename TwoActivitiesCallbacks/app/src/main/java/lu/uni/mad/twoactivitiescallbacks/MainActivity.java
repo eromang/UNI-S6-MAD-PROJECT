@@ -1,5 +1,6 @@
 package lu.uni.mad.twoactivitiescallbacks;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,6 +32,16 @@ public class MainActivity extends AppCompatActivity {
 
         mReplyHeadTextView = findViewById(R.id.text_header_reply);
         mReplyTextView = findViewById(R.id.text_message_reply);
+
+        // To return the instance state if necessary
+        if(savedInstanceState != null) {
+            boolean isVisible = savedInstanceState.getBoolean("reply_visible");
+            if(isVisible) {
+                mReplyHeadTextView.setVisibility(View.VISIBLE);
+                mReplyTextView.setText(savedInstanceState.getString("reply_text"));
+                mReplyTextView.setVisibility(View.VISIBLE);
+            }
+        }
     }
 
     public void launchSecondActivity(View view) {
@@ -54,6 +65,16 @@ public class MainActivity extends AppCompatActivity {
                 mReplyTextView.setText(reply);
                 mReplyTextView.setVisibility(View.VISIBLE);
             }
+        }
+    }
+
+    // Too save the Instance state
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (mReplyHeadTextView.getVisibility() == View.VISIBLE) {
+            outState.putBoolean("reply_visible", true);
+            outState.putString("reply_text",mReplyTextView.getText().toString());
         }
     }
 
