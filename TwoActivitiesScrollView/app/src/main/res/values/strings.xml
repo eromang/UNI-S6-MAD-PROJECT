@@ -3,4 +3,14 @@
     <string name="text_one">Text One</string>
     <string name="text_two">Text Two</string>
     <string name="text_three">Text Three</string>
+    <string name="activity2_name">Second Activity ScrollView</string>
+    <string name="text_one_title">Text One Title</string>
+    <string name="text_two_title">Text Two Title</string>
+    <string name="text_three_title">Text Three Title</string>
+    <string name="text_one_subtitle">Text One SubTitle</string>
+    <string name="text_two_subtitle">Text Two SubTitle</string>
+    <string name="text_three_subtitle">Text Three SubTitle</string>
+    <string name="text_one_article">Text One Article</string>
+    <string name="text_two_article">Text Two Article</string>
+    <string name="text_three_article">Text Three Article</string>
 </resources>
