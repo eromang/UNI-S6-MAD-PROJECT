@@ -4,6 +4,199 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/preferences"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Select your preferences"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/select_color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Select your prefered color"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/preferences" />
+
+    <Button
+        android:id="@+id/black_background_button"
+        style="@style/AppTheme.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:text="@string/black_button"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton_black"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_color" />
+
+    <Button
+        android:id="@+id/red_background_button"
+        style="@style/AppTheme.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/red_background"
+        android:text="@string/red_button"
+        app:layout_constraintStart_toEndOf="@+id/black_background_button"
+        app:layout_constraintEnd_toStartOf="@+id/blue_background_button"
+        app:layout_constraintTop_toBottomOf="@+id/select_color"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton_red"/>
+
+    <Button
+        android:id="@+id/blue_background_button"
+        style="@style/AppTheme.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_background"
+        android:text="@string/blue_button"
+        app:layout_constraintEnd_toStartOf="@+id/green_background_button"
+        app:layout_constraintStart_toEndOf="@+id/red_background_button"
+        app:layout_constraintTop_toBottomOf="@+id/select_color"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton_blue"/>
+
+    <Button
+        android:id="@+id/green_background_button"
+        style="@style/AppTheme.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/green_background"
+        android:text="@string/green_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/blue_background_button"
+        app:layout_constraintTop_toBottomOf="@+id/select_color"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton_green"/>
+
+    <ToggleButton
+        android:id="@+id/toggleButton_black"
+        style="@style/AppTheme.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_split"
+        app:layout_constraintEnd_toStartOf="@+id/toggleButton_red"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/black_background_button" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_red"
+        style="@style/AppTheme.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_split"
+        app:layout_constraintEnd_toStartOf="@+id/toggleButton_blue"
+        app:layout_constraintStart_toEndOf="@+id/toggleButton_black"
+        app:layout_constraintTop_toBottomOf="@+id/red_background_button" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_blue"
+        style="@style/AppTheme.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_split"
+        app:layout_constraintEnd_toStartOf="@+id/toggleButton_green"
+        app:layout_constraintStart_toEndOf="@+id/toggleButton_red"
+        app:layout_constraintTop_toBottomOf="@+id/blue_background_button" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_green"
+        style="@style/AppTheme.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_split"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/toggleButton_blue"
+        app:layout_constraintTop_toBottomOf="@+id/green_background_button" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_split"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="432dp" />
+
+    <TextView
+        android:id="@+id/select_color2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Or select your color here"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/color_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_split" />
+
+    <Spinner
+        android:id="@+id/color_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/select_color2"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_split" />
+
+    <TextView
+        android:id="@+id/selected_color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_color2"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/save_button"
+        style="@style/AppTheme.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="10dp"
+        android:onClick="savePreferences"
+        android:text="@string/save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selected_color" />
+
+    <Button
+        android:id="@+id/reset_button"
+        style="@style/AppTheme.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="resetPreferences"
+        android:text="@string/reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toEndOf="@+id/save_button"
+        app:layout_constraintTop_toBottomOf="@+id/selected_color" />
+
 
 </android.support.constraint.ConstraintLayout>
